@@ -1,6 +1,11 @@
 package ch1
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
+
+// 变量 常量
 
 var Package string
 
@@ -41,6 +46,7 @@ func Get() {
 	c = a + int16(b)
 	fmt.Println(n, n2, n3, name, age, sex, c)
 
+	// 局部变量 :=
 	st := "12321"
 	fmt.Println(st)
 
@@ -52,8 +58,35 @@ func init() {
 	fmt.Println("var init")
 
 	log()
+
+	testMakePerson()
 }
 
 func log() {
 	fmt.Println(n + n2)
+}
+
+// 声明聚类
+
+var (
+	isShow bool // false
+	canUse bool // false
+)
+
+var (
+	person       = ""
+	son          = ""
+	girl         = ""
+	aLongTimeAgo = time.Unix(1, 0)
+)
+
+func makePerson() (name string, age int) {
+	return "name", 20
+}
+
+// 短变量声明的就近原则
+func testMakePerson() {
+	if name, age := makePerson(); name != "" && age != 0 {
+		fmt.Println(name, age)
+	}
 }
