@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	ch1 "study-go/ch1"
+	_ "study-go/ch2"
 )
 
 func init() {
@@ -10,9 +10,9 @@ func init() {
 }
 
 func main() {
-	fmt.Println("hello world!")
-	ch1.Get()
-	ch1.Log()
+	// fmt.Println("hello world!")
+	// ch1.Get()
+	// ch1.Log()
 
-	fmt.Println(ch1.Package)
+	// fmt.Println(ch1.Package)
 }
