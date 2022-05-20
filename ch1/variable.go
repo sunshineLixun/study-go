@@ -54,6 +54,7 @@ func Get() {
 	fmt.Println(f, x, y)
 }
 
+// init函数
 func init() {
 	fmt.Println("var init")
 
@@ -65,6 +66,38 @@ func init() {
 func log() {
 	fmt.Println(n + n2)
 }
+
+const (
+	f1 = 100
+	f2 // 100
+	f3 // 100
+)
+
+// iota
+// iota是go语言的常量计数器，
+// 只能在常量的表达式中使用。
+// iota在const关键字出现时将被重置为0。
+// const中每新增一行常量声明将使iota计数一次(iota可理解为const语句块中的行索引)。 使用iota能简化定义，在定义枚举时很有用
+const (
+	m1 = iota // 0
+	m2        // 1
+	m3        // 2
+	m4        // 3
+)
+
+const (
+	b1 = iota // 0
+	b2        // 1
+	_
+	b3 // 3
+)
+
+const (
+	l1 = iota // 0
+	l2 = 100  // 100
+	l3 = iota // 2
+	l4        // 3  iota可理解为const语句块中的行索引
+)
 
 // 声明聚类
 
