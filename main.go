@@ -1,12 +1,12 @@
 package main
 
 import (
-	"fmt"
-	_ "study-go/ch2"
+	// _ "study-go/ch2"
+	_ "study-go/ch3"
 )
 
 func init() {
-	fmt.Println("main init")
+	// fmt.Println("main init")
 }
 
 func main() {
