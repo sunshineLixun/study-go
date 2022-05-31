@@ -20,6 +20,10 @@ func init() {
 	// 全部
 	s7 := arr[:]
 
-	fmt.Println(s1, s2, s3, s4, s5, s6, s7)
+	s8 := arr[1:3]
+	s8[0] = 100
+	s8[1] = 200
+
+	fmt.Println(s1, s2, s3, s4, s5, s6, s7, s8, arr)
 
 }
