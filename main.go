@@ -2,7 +2,8 @@ package main
 
 import (
 	// _ "study-go/ch2"
-	_ "study-go/ch3"
+	// _ "study-go/ch3"
+	_ "study-go/ch4"
 )
 
 func init() {
