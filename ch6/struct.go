@@ -3,6 +3,7 @@ package ch6
 import "fmt"
 
 // struct是值类型
+// 结构体中字段大写开头表示可公开访问，小写表示私有（仅在定义当前结构体的包中可访问）。
 
 type people struct {
 	name   string
@@ -71,7 +72,21 @@ func init() {
 	fmt.Println(p6)
 
 	p7 := newPerson("vscode", 12, true)
+
+	p7.dreak()
+
 	fmt.Println(p7)
+
+	p8 := newPerson("123", 12, true)
+
+	p8.setName("456")
+
+	fmt.Println(p8) // &{456 12 true}
+
+	p9 := newPerson("kk", 12, true)
+	p9.setName2("nn")
+
+	fmt.Println(p9) // &{kk 12 true}
 
 }
 
@@ -82,4 +97,18 @@ func newPerson(name string, age int, gender bool) *people {
 		age:    age,
 		gender: gender,
 	}
+}
+
+func (p people) dreak() {
+	fmt.Printf("姓名是: %s", p.name)
+}
+
+// 指针类型 类似js 中 的 this。传递指针，修改的是指针指向的数据
+func (p *people) setName(name string) {
+	p.name = name
+}
+
+// 值类型 改操作只是针对副本，无法修改接收者变量本身
+func (p people) setName2(name string) {
+	p.name = name
 }
