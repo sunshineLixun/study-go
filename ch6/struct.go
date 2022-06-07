@@ -2,6 +2,8 @@ package ch6
 
 import "fmt"
 
+// struct是值类型
+
 type people struct {
 	name   string
 	age    int
@@ -68,4 +70,16 @@ func init() {
 
 	fmt.Println(p6)
 
+	p7 := newPerson("vscode", 12, true)
+	fmt.Println(p7)
+
+}
+
+// 构造函数。工厂函数
+func newPerson(name string, age int, gender bool) *people {
+	return &people{
+		name:   name,
+		age:    age,
+		gender: gender,
+	}
 }
