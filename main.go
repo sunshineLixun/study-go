@@ -5,7 +5,8 @@ import (
 	// _ "study-go/ch3"
 	// _ "study-go/ch4"
 	// _ "study-go/ch5"
-	_ "study-go/ch6"
+	// _ "study-go/ch6"
+	_ "study-go/ch7"
 )
 
 func init() {
@@ -18,4 +19,5 @@ func main() {
 	// ch1.Log()
 
 	// fmt.Println(ch1.Package)
+
 }
