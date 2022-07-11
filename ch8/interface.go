@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-// interface{}  万能类型
+// interface{} 空接口 万能类型
 
 func showSomeThing(sm interface{}) {
 	// 断言
@@ -34,6 +34,17 @@ func init() {
 	}
 
 	reflectFunc(t)
+
+	// 空接口实现可以保存任意值的字典
+	var imap = make(map[string]interface{})
+
+	imap["name"] = "go"
+
+	imap["id"] = [6]int{}
+
+	imap["infos"] = make([]Type, 5)
+
+	fmt.Println(imap)
 }
 
 func reflectFunc(value interface{}) {
