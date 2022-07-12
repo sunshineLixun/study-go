@@ -7,7 +7,8 @@ import (
 	// _ "study-go/ch5"
 	// _ "study-go/ch6"
 	// _ "study-go/ch7"
-	_ "study-go/ch8"
+	// _ "study-go/ch8"
+	_ "study-go/ch9"
 )
 
 func init() {

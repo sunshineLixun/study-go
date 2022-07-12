@@ -40,9 +40,17 @@ func init() {
 
 	imap["name"] = "go"
 
-	imap["id"] = [6]int{}
+	imap["id"] = [6]int{
+		1,
+	}
 
 	imap["infos"] = make([]Type, 5)
+
+	imap["stu"] = [...]Type{
+		{
+			Name: "12312",
+		},
+	}
 
 	fmt.Println(imap)
 }
